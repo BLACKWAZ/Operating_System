@@ -132,11 +132,11 @@ This document describes the network configuration for two virtual machines hoste
 VirtualBox supports several networking modes. For this configuration:
 ## Server VM:
 - **Adapter 1:** Host-Only (vboxnet0)
-- **Network:** 192.168.56.0/24
+- **Network:** 192.168.56.102/24
 
 ## Workstation VM:
 - **Adapter 1:** Host-Only (vboxnet1)
-- **Network:** 192.168.1.0/24
+- **Network:** 192.168.101/24
 
 ## 3. IP Addressing
 
