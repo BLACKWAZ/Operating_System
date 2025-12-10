@@ -186,12 +186,15 @@ Swap:	0	0	0
   ![image alt](assets/images/df-h.png)
  
 
-  Filesystem   Size   Used   Available   Use%   Mounted on
-  tmpfs        392M   1.5M   391M        1%     /run
-  /dev/sda2    25G    5.6G   18G         24%    /
-  tmpfs        2.0G   0      2.0G        0%     /dev/shm
-  tmpfs        5.0M   8.0K   5.0M        1%     /run/lock
-  tmpfs        392M   128K   392M        1%     /run/user/1000
+  ```markdown
+| Filesystem | Size | Used | Available | Use% | Mounted on |
+|------------|------|------|-----------|------|------------|
+| tmpfs | 392M | 1.5M | 391M | 1% | /run |
+| /dev/sda2 | 25G | 5.6G | 18G | 24% | / |
+| tmpfs | 2.0G | 0 | 2.0G | 0% | /dev/shm |
+| tmpfs | 5.0M | 8.0K | 5.0M | 1% | /run/lock |
+| tmpfs | 392M | 128K | 392M | 1% | /run/user/1000 |
+```
 
 
 
@@ -209,6 +212,7 @@ Ip addr
 
 ![image alt](assets/images/ipaddr.png)
  
+
 
 
 
