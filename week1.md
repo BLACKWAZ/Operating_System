@@ -167,10 +167,13 @@ Goal: Collect system specs from both Server and Workstation using CLI tools.
 
 Commands to run (on each VM)
   uname 
- 
+  
+ ![image alt]()
 Linux 
 
   free -h
+
+  ![image alt]()
  
 
 	total	used	free	shared	Buff/cache	available
@@ -178,6 +181,8 @@ Mem:	4010208	1435592	1819100	39464	1017372	2574616
 Swap:	0	0	0			
 
   df -h
+
+  ![image alt]()
  
 Filesystem	Size	Used	Available	Use%	Mounted on
 tmpfs	392M	1.5M	391M	1%	/run
@@ -187,6 +192,8 @@ tmpfs	5.0M	8.0K	5.0M	1%	/run/lock
 tmpfs	392M	128K	392M	1%	/run/user/1000
 
   lsb_release -a
+
+  ![image alt]()
  
 Distributor ID:	Ubuntu
 Description:	Ubuntu 24.04.3 LTS
@@ -194,7 +201,10 @@ Release:	24.04
 Codename:	noble
 
 Ip addr
+
+![image alt]()
  
+
 
 
 
