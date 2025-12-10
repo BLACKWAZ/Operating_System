@@ -167,8 +167,9 @@ Goal: Collect system specs from both Server and Workstation using CLI tools.
 
 Commands to run (on each VM)
   uname 
-  
- ![image alt]()
+ 
+![image alt](https://github.com/BLACKWAZ/Operating_System/blob/27ccfc707a762e5a21bff346089320816fb9329a/assets/images/uname.png)
+
 Linux 
 
   free -h
@@ -204,6 +205,7 @@ Ip addr
 
 ![image alt](https://github.com/BLACKWAZ/Operating_System/blob/184ef41ba209acdc26611bd567f40f09b737a006/assets/images/ipaddr.png)
  
+
 
 
 
