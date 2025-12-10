@@ -130,37 +130,53 @@ This document describes the network configuration for two virtual machines hoste
 2. VirtualBox Network Design
 2.1 VirtualBox Network Interfaces
 VirtualBox supports several networking modes. For this configuration:
-Server VM:
-•	• Adapter 1: Host-Only (vboxnet0)
-•	• Network: 192.168.56.0/24
-Workstation VM:
-•	• Adapter 1: Host-Only (vboxnet1)
-•	• Network: 192.168.1.0/24
-3. IP Addressing
-3.1 Server VM
-NIC Mode	Host-Only (vboxnet0)
-IP Address	192.168.56.102
-Subnet Mask	255.255.255.0 (/24)
-Gateway	None
-Example Linux Configuration:
+## Server VM:
+- **Adapter 1:** Host-Only (vboxnet0)
+- **Network:** 192.168.56.0/24
+
+## Workstation VM:
+- **Adapter 1:** Host-Only (vboxnet1)
+- **Network:** 192.168.1.0/24
+
+## 3. IP Addressing
+
+### 3.1 Server VM
+
+| Setting      | Value                  |
+|--------------|------------------------|
+| NIC Mode     | Host-Only (vboxnet0)   |
+| IP Address   | 192.168.56.102         |
+| Subnet Mask  | 255.255.255.0 (/24)    |
+| Gateway      | None                   |
+
+**Example Linux Configuration:**
+```yaml
 network:
   version: 2
   ethernets:
     enp0s3:
       addresses:
         - 192.168.56.102/24
-3.2 Workstation VM
-NIC Mode	Host-Only (vboxnet1)
-IP Address	192.168.1.101
-Subnet Mask	255.255.255.0 (/24)
-Gateway	None
-Example Linux Configuration:
+```
+
+### 3.2 Workstation VM
+
+| Setting      | Value                  |
+|--------------|------------------------|
+| NIC Mode     | Host-Only (vboxnet1)   |
+| IP Address   | 192.168.1.101          |
+| Subnet Mask  | 255.255.255.0 (/24)    |
+| Gateway      | None                   |
+
+**Example Linux Configuration:**
+```yaml
 network:
   version: 2
   ethernets:
     enp0s3:
       addresses:
         - 192.168.1.101/24
+```
 # Phase 1 — System Specifications (CLI documentation)
 
 Goal: Collect system specs from both Server and Workstation using CLI tools.
@@ -219,6 +235,7 @@ Ip addr
 
 ![image alt](assets/images/ipaddr.png)
  
+
 
 
 
