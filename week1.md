@@ -6,7 +6,7 @@ Overview
 - Management: Host machine will use VirtualBox Host-Only network to reach both VMs for management, and VirtualBox NAT to provide internet access to VMs.
 
  
-![image alt](https://github.com/BLACKWAZ/Operating_System/blob/0c6fda6f5b2b077982bf8e7ae56c2c4c5cc2c807/assets/images/system_architecture_watchable.png)
+![image alt](assets/images/system_architecture_watchable.png)
 
 
 
@@ -168,13 +168,13 @@ Goal: Collect system specs from both Server and Workstation using CLI tools.
 Commands to run (on each VM)
   uname 
  
-![image alt](https://github.com/BLACKWAZ/Operating_System/blob/27ccfc707a762e5a21bff346089320816fb9329a/assets/images/uname.png)
+![image alt](assets/images/uname.png)
 
 Linux 
 
   free -h
 
-  ![image alt](https://github.com/BLACKWAZ/Operating_System/blob/184ef41ba209acdc26611bd567f40f09b737a006/assets/images/free.png)
+  ![image alt](assets/images/free.png)
  
 
 	total	used	free	shared	Buff/cache	available
@@ -198,7 +198,7 @@ tmpfs	392M	128K	392M	1%	/run/user/1000
 
   lsb_release -a
 
-  ![image alt](https://github.com/BLACKWAZ/Operating_System/blob/184ef41ba209acdc26611bd567f40f09b737a006/assets/images/lsb.png)
+  ![image alt](assets/images/lsb.png)
  
 Distributor ID:	Ubuntu
 Description:	Ubuntu 24.04.3 LTS
@@ -207,8 +207,9 @@ Codename:	noble
 
 Ip addr
 
-![image alt](https://github.com/BLACKWAZ/Operating_System/blob/184ef41ba209acdc26611bd567f40f09b737a006/assets/images/ipaddr.png)
+![image alt](assets/images/ipaddr.png)
  
+
 
 
 
