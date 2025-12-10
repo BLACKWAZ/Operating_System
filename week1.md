@@ -6,7 +6,7 @@ Overview
 - Management: Host machine will use VirtualBox Host-Only network to reach both VMs for management, and VirtualBox NAT to provide internet access to VMs.
 
  
-![image alt] (https://github.com/BLACKWAZ/Operating_System/blob/0c6fda6f5b2b077982bf8e7ae56c2c4c5cc2c807/assets/images/system_architecture_watchable.png)
+![image alt](https://github.com/BLACKWAZ/Operating_System/blob/0c6fda6f5b2b077982bf8e7ae56c2c4c5cc2c807/assets/images/system_architecture_watchable.png)
 
 
 
@@ -195,6 +195,7 @@ Codename:	noble
 
 Ip addr
  
+
 
 
 
