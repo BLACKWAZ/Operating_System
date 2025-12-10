@@ -177,9 +177,12 @@ Linux
   ![image alt](assets/images/free.png)
  
 
-	total	used	free	shared	Buff/cache	available
-Mem:	4010208	1435592	1819100	39464	1017372	2574616
-Swap:	0	0	0			
+```markdown
+|       | total   | used    | free    | shared | Buff/cache | available |
+|-------|---------|---------|---------|--------|------------|-----------|
+| Mem:  | 4010208 | 1435592 | 1819100 | 39464  | 1017372    | 2574616   |
+| Swap: | 0       | 0       | 0       |        |            |           |
+```
 
   df -h
 
@@ -203,15 +206,20 @@ Swap:	0	0	0
 
   ![image alt](assets/images/lsb.png)
  
-Distributor ID:	Ubuntu
-Description:	Ubuntu 24.04.3 LTS
-Release:	24.04
-Codename:	noble
+```markdown
+| Field          | Value             |
+|----------------|-------------------|
+| Distributor ID | Ubuntu            |
+| Description    | Ubuntu 24.04.3 LTS|
+| Release        | 24.04             |
+| Codename       | noble             |
+```
 
 Ip addr
 
 ![image alt](assets/images/ipaddr.png)
  
+
 
 
 
