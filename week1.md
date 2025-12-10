@@ -183,7 +183,7 @@ Swap:	0	0	0
 
   df -h
 
-  ![image alt](https://github.com/BLACKWAZ/Operating_System/blob/184ef41ba209acdc26611bd567f40f09b737a006/assets/images/df-h.png)
+  ![image alt](assets/images/df-h.png)
  
 
 Filesystem	Size	Used	Available	Use%	Mounted on
@@ -209,6 +209,7 @@ Ip addr
 
 ![image alt](https://github.com/BLACKWAZ/Operating_System/blob/184ef41ba209acdc26611bd567f40f09b737a006/assets/images/ipaddr.png)
  
+
 
 
 
