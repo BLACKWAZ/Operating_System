@@ -187,7 +187,6 @@ Swap:	0	0	0
  
 
   Filesystem   Size   Used   Available   Use%   Mounted on
-  ------------ ------ ------ ----------- ------ ----------------
   tmpfs        392M   1.5M   391M        1%     /run
   /dev/sda2    25G    5.6G   18G         24%    /
   tmpfs        2.0G   0      2.0G        0%     /dev/shm
@@ -210,6 +209,7 @@ Ip addr
 
 ![image alt](assets/images/ipaddr.png)
  
+
 
 
 
