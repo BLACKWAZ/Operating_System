@@ -1,8 +1,8 @@
 # CMPN202 Operating Systems Coursework Journal
 
-**Student ID:** [Your Student ID]  
+**Student ID:** [A00033291]  
 **Module:** Operating Systems (Level 5)  
-**Programme:** [Your Programme]  
+**Programme:** [Bsc Hons Cyber Security]  
 **Academic Year:** 2025/26
 
 ---
