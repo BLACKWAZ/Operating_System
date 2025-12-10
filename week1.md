@@ -173,7 +173,7 @@ Linux
 
   free -h
 
-  ![image alt]()
+  ![image alt](https://github.com/BLACKWAZ/Operating_System/blob/184ef41ba209acdc26611bd567f40f09b737a006/assets/images/free.png)
  
 
 	total	used	free	shared	Buff/cache	available
@@ -182,7 +182,7 @@ Swap:	0	0	0
 
   df -h
 
-  ![image alt]()
+  ![image alt](https://github.com/BLACKWAZ/Operating_System/blob/184ef41ba209acdc26611bd567f40f09b737a006/assets/images/df-h.png)
  
 Filesystem	Size	Used	Available	Use%	Mounted on
 tmpfs	392M	1.5M	391M	1%	/run
@@ -193,7 +193,7 @@ tmpfs	392M	128K	392M	1%	/run/user/1000
 
   lsb_release -a
 
-  ![image alt]()
+  ![image alt](https://github.com/BLACKWAZ/Operating_System/blob/184ef41ba209acdc26611bd567f40f09b737a006/assets/images/lsb.png)
  
 Distributor ID:	Ubuntu
 Description:	Ubuntu 24.04.3 LTS
@@ -202,8 +202,9 @@ Codename:	noble
 
 Ip addr
 
-![image alt]()
+![image alt](https://github.com/BLACKWAZ/Operating_System/blob/184ef41ba209acdc26611bd567f40f09b737a006/assets/images/ipaddr.png)
  
+
 
 
 
