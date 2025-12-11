@@ -73,6 +73,10 @@ Useful options:
 
 Testing Approach
 
+To validate the effectiveness of process management controls, I followed a structured testing lifecycle.
+
+
+
 
 
 
