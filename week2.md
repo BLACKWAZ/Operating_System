@@ -63,6 +63,7 @@ Purpose:
 commands syntax:
 
 nmon -t
+
 Useful options:
 	•	-o → save output to file
 	•	-C → CPU-related statistics
@@ -72,40 +73,6 @@ Useful options:
 
 Testing Approach
 
-To ensure structured, repeatable, and meaningful results, I designed a simple lifecycle for all performance tests:
 
-Step 1 — Establish Baseline Measurements
-
-Before running any workloads, I recorded idle system metrics. This creates a reference point for later comparisons in Week 6.
-
-Step 2 — Apply Workload or Stress Activity
-
-Depending on the application selected in Week 3, I will introduce different types of load:
-	•	CPU-heavy processes
-	•	Memory-intensive applications
-	•	Disk I/O operations
-	•	Network traffic generation
-
-Step 3 — Monitor System Behaviour
-
-Using SSH, I captured real-time metrics with top, ps, and nmon.
-This allows observation of:
-	•	CPU saturation
-	•	Memory consumption trends
-	•	Process creation and scheduling
-	•	Disk throughput
-	•	Network utilisation
-
-Step 4 — Save and Organise Data
-
-nmon output logs are stored for later graphing and analysis. Screenshots and command outputs are also saved for the final journal.
-
-Step 5 — Evaluate Process Management Controls
-
-I verified how efficiently the OS handles:
-	•	Process prioritisation
-	•	Scheduling behaviour
-	•	Resource contention
-	•	Load distribution across CPU cores
 
 
