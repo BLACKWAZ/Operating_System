@@ -24,3 +24,88 @@ Purpose:
 	•	Monitor memory usage
 	•	Track load averages
 	•	Identify high-usage processes in real time
+
+Commands used 
+top
+Inside the program:
+	•	Press P to reorder processes by CPU usage
+	•	Press M to list processes by memory consumption
+
+(HTOP/BTOP could be alternatives, but for this project I prioritised core utilities already included in most server distributions.)
+
+⸻
+
+2. ps + Filtering Options – Detailed Process Snapshots
+
+ps provides a static, detailed list of running processes that can be sorted or filtered depending on the information needed.
+
+Purpose:
+	•	Capture process state at specific test intervals
+	•	Compare memory and CPU consumption under different workloads
+	•	Verify correct process creation during performance tests
+example commands
+
+ps aux
+ps aux --sort=-%cpu     # sort by highest CPU usage
+ps aux --sort=-%mem     # sort by highest memory usage
+ps -u <username>        # view processes for specific user
+ps -p <PID>             # view a single process by PID
+pstree -p               # visualise process hierarchy
+
+3. nmon – Exportable System Statistics
+
+nmon provides a more comprehensive set of performance metrics while still remaining lightweight and terminal-based.
+
+Purpose:
+	•	Capture system behaviour over time
+	•	Export monitoring data for later analysis in Week 6
+	•	Collect CPU, memory, disk, and network statistics simultaneously
+commands syntax:
+
+nmon -t
+Useful options:
+	•	-o → save output to file
+	•	-C → CPU-related statistics
+	•	-M → memory metrics
+	•	-D → disk activity
+	•	-N → network usage
+
+Testing Approach
+
+To ensure structured, repeatable, and meaningful results, I designed a simple lifecycle for all performance tests:
+
+Step 1 — Establish Baseline Measurements
+
+Before running any workloads, I recorded idle system metrics. This creates a reference point for later comparisons in Week 6.
+
+Step 2 — Apply Workload or Stress Activity
+
+Depending on the application selected in Week 3, I will introduce different types of load:
+	•	CPU-heavy processes
+	•	Memory-intensive applications
+	•	Disk I/O operations
+	•	Network traffic generation
+
+Step 3 — Monitor System Behaviour
+
+Using SSH, I captured real-time metrics with top, ps, and nmon.
+This allows observation of:
+	•	CPU saturation
+	•	Memory consumption trends
+	•	Process creation and scheduling
+	•	Disk throughput
+	•	Network utilisation
+
+Step 4 — Save and Organise Data
+
+nmon output logs are stored for later graphing and analysis. Screenshots and command outputs are also saved for the final journal.
+
+Step 5 — Evaluate Process Management Controls
+
+I verified how efficiently the OS handles:
+	•	Process prioritisation
+	•	Scheduling behaviour
+	•	Resource contention
+	•	Load distribution across CPU cores
+
+
