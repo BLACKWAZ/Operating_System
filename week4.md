@@ -31,7 +31,7 @@ ssh-copy-id username@server_ip_address
 
 This process appends the public key to the `~/.ssh/authorized_keys` file on the server, enabling authentication via SSH keys.
 
-![Key installation ](/week4_image/key-install.png)
+![Key installation ](assets/images-4/sshpublic.png)
 
 ---
 
@@ -152,6 +152,7 @@ The screenshots below illustrate successful SSH connections established using ke
 ![](/week4_image/demo\(3\).png)
 
 ![](/week4_image/demo\(final\).png)
+
 
 
 
