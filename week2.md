@@ -160,11 +160,7 @@ SSH hardening involves modifying the SSH configuration file, typically located a
 
 It is crucial to create a backup of the initial SSH configuration file before making any significant changes, allowing for a quick rollback in case of issues. The backup can be created using the command: `sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.backup`
 
-Before SSH configuration changes:
-
-![before](/images-week2/ssh_hardening1.png)
-
-After SSH configuration changes:
+SSH configuration changes:
 
 ![after](assets/images-2/ssh_after config.png)
 
@@ -217,11 +213,11 @@ After SSH configuration changes:
 
 4.  **Testing `sudo` Access**
 
-    ![](assets/images-2/testingsudo access.png)
+    ![](assets/images-2/testingsudoaccess.png)
 
 5.  **Listing all Users with `sudo` Access**
 
-    ![](assets/images-2/listing all users with sudo.png)
+    ![](assets/images-2/listingalluserswithsudo.png)
 
 ## Access Control (MAC)
 
@@ -262,6 +258,7 @@ The status of the `unattended-upgrades` service can be checked with the command:
 3.  **Root Privilege Compromise**
     An attacker who gains initial access may attempt to escalate privileges to the root account.
     *   **Mitigation**: Disabling direct root login via SSH (`PermitRootLogin no` in `sshd_config`) forces attackers to compromise a specific, non-root username first. Furthermore, creating a dedicated `adminuser` and granting `sudo` rights only when necessary adds an essential layer of protection and adheres to the principle of least privilege.
+
 
 
 
