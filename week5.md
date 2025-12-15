@@ -15,7 +15,7 @@ sudo aa-status
 
 This command provides information about loaded profiles, enforced profiles, and applications running under AppArmor control.
 
-![](/week5_images/aa-status.png)
+![](assets/images-5/sudoastatus.png)
 
 ---
 
@@ -28,10 +28,6 @@ sudo aa-status --profiled
 sudo aa-status --enforced
 sudo aa-status --complaining
 ```
-
-These commands display which profiles are loaded, actively enforced, or running in complain mode.
-
-![](/week5_images/complaining.png)
 
 ---
 
@@ -64,7 +60,7 @@ Complain mode does not prevent any actions but is used primarily for monitoring 
 
 ## AppArmor Profile Structure
 
-![](/week5_images/aa-profile.png)
+![](assets/images-5/appmirror.png)
 
 AppArmor profiles are plain text configuration files located in `/etc/apparmor.d/`. Each profile specifies which resources an application may access. Any operation not explicitly permitted is denied by default.
 
@@ -136,7 +132,7 @@ sudo apt install unattended-upgrades
 sudo dpkg-reconfigure --priority=low unattended-upgrades
 ```
 
-![](/week5_images/unattended-upgrades%20installation.%20.png)
+![](assets/images-5/unattended.png)
 
 ### Verification
 
@@ -146,9 +142,9 @@ The configuration can be verified by inspecting the following file:
 cat /etc/apt/apt.conf.d/20auto-upgrades
 ```
 
-![](/week5_images/v-updates.png)
+![](assets/images-5/verification.png)
 
-![](/week5_images/verification2_of_autoaupdates.png)
+![](assets/images-5/verificaton2.png)
 
 ---
 
@@ -162,7 +158,7 @@ Fail2Ban is an intrusion prevention system (IPS) that actively blocks malicious 
 sudo apt install fail2ban -y
 ```
 
-![](/week5_images/fail2ban\(1\).png)
+![](assets/images-5/fail2ban.png)
 
 ### Configuration
 
@@ -173,17 +169,17 @@ sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
 sudo nano /etc/fail2ban/jail.local
 ```
 
-![](/week5_images/fail2ban\(2\).png)
+![](assets/images-5/fail2banconfigure.png)
 
 The `sshd` section is modified to enable protection for SSH services.
 
 **Before configuration:**
 
-![](/week5_images/fail2ban\(3\).png)
+![](assets/images-5/before.png)
 
 **After configuration:**
 
-![](/week5_images/fail2ban\(4\).png)
+![](assets/images-5/after.png)
 
 ### Verification
 
@@ -313,5 +309,6 @@ echo "----------------------------------------------------"
 echo "Monitoring Complete."
 echo "----------------------------------------------------"
 ```
+
 
 
