@@ -18,7 +18,7 @@ This tool can be installed using `sudo apt install sysbench -y`.
 
 Verification for installation can be done using `sysbench --version`.
 
-![sysbench version](assets/images-3/sysbench.png)
+![sysbench version](assets/images-3/stressversion.png)
 
 
 ### RAM-Intensive Workload
@@ -108,10 +108,8 @@ We anticipate a resource profile showing **100% utilization** of all assigned co
 **Test Execution**
 Command given: `sysbench cpu --cpu-max-prime=20000 run`
 
-![sysbench command](/week3_image/w5.0.png)
+![sysbench command](assets/images-3/sysbench.png)
 
-
-![output sysbench](/week3_image/sysbench_output.png)
 
 ### 2. RAM Evaluation (Stress-ng)
 
@@ -121,14 +119,11 @@ We expect RAM usage to spike rapidly until the physical memory limit is reached.
 
 Command given: `stress-ng --vm $(nproc) --vm-bytes 90% --timeout 20s`
 
-![stress-ng](/week3_image/w6.0.png)
+![stress-ng](assets/images-3/ramtest.png)
 
 
-![stress ng output](/week3_image/stres-ng-o1.png)
+![stress ng output](assets/images-3/ramtest2.png)
 
-![stress ng output](/week3_image/stress-ng2.png)
-
-![stress ng output](/week3_image/stress-ng3.png)
 
 
 ### 3. Disk I/O Evaluation (Fio)
@@ -136,15 +131,10 @@ Command given: `stress-ng --vm $(nproc) --vm-bytes 90% --timeout 20s`
 The Disk Read/Write speeds are expected to reach the physical or throttled limit of the drive. Consequently, CPU usage will likely manifest as high **"iowait"** time (the time the CPU spends idle, waiting for disk operations to complete) rather than active processing.
 
 
-![image proof](/week3_image/w7.0.1.png)
+![image proof](assets/images-3/diskusage.png)
 
 
-![image proof](/week3_image/w7.proof.png)
-
-
-![image proof](/week3_image/w7.btop.png)
-
-![image proof](/week3_image/w7.htop.png)
+![image proof](assets/images-3/disk2.png)
 
 
 
@@ -183,6 +173,7 @@ CPU and RAM usage are expected to remain low. The primary metric will be network
 ## Monitoring Strategy 
 
 To measure the performance impact of the selected applications, we will utilize the monitoring tools and strategies established in Week 2.
+
 
 
 
