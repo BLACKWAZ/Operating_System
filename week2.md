@@ -60,41 +60,33 @@ This section illustrates the baseline resource consumption of the server when it
 
 ### Idle state using `top`
 
-![System idle from top ](images-week2/server-idle-1.png)
+![System idle from top ](assets/images-2/top.png)
 
 ### Idle state using `htop`
 
-![System idle from htop ](images-week2/server-idle-2.png)
+![System idle from htop ](assets/images-2/htop.png)
 
 ### Process Tree (`pstree`)
 
-![System ps tree](images-week2/server-pstree.png)
+![System ps tree](assets/images-2/pstree.png)
 
 ### `btop`
 
 **Installation**
 `sudo apt install btop`
 
-![image proof of installing btop](/images-week2/btop-installation.png)
-
 **System idle state from Btop**
 
-![System idle state from btop](/images-week2/btop-idle.png)
+![System idle state from btop](assets/images-2/btop.png)
 
 ### `nmon`
 
 **Installation**
 `sudo apt install nmon`
 
-![nmon installation](/images-week2/nmon.png)
-
-**`nmon` menu page** (`nmon -a`)
-
-![nmon menu page](/images-week2/nmon-s1.png)
-
 **`nmon` view with CPU, Memory, and network status**
 
-![nmon stats view](/images-week2/nmon-view.png)
+![nmon stats view](assets/images-2/nmon.png)
 
 ## Stress Testing Methodology
 
@@ -116,21 +108,20 @@ Some of the widely used tools include:
 
 The command executed was: `stress --cpu 4 --timeout 60&`
 
-![command proof](/images-week2/proof_of_stress_test_command.png)
 
 ### Results from Monitoring Tools
 
 **`top`**
-![top](/images-week2/stress-in-top.png)
+![top](assets/images-2/stress-top.png)
 
 **`btop`**
-![btop](/images-week2/stress-in-btop.png)
+![btop](assets/images-2/stress-btop.png)
 
 **`nmon`**
-![nmon](/images-week2/stress-in-nmon.png)
+![nmon](assets/images-2/stress-nmon.png)
 
 **Process Tree (`pstree`)**
-![psstree](/images-week2/stress-in-pstree.png)
+![psstree](assets/images-2/stress-pstree.png)
 
 # Security Configuration Checklist and Testing Plan
 
@@ -169,13 +160,9 @@ SSH hardening involves modifying the SSH configuration file, typically located a
 
 It is crucial to create a backup of the initial SSH configuration file before making any significant changes, allowing for a quick rollback in case of issues. The backup can be created using the command: `sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.backup`
 
-Before SSH configuration changes:
+SSH configuration changes:
 
-![before](/images-week2/ssh_hardening1.png)
-
-After SSH configuration changes:
-
-![after](/images-week2/ssh_hardening2.png)
+![after](assets/images-2/ssh_after config.png)
 
 **Changes Implemented**
 
@@ -185,11 +172,8 @@ After SSH configuration changes:
 2.  **`PubkeyAuthentication yes`**
     This setting ensures that login is possible using public/private key pairs. After generating the key on the workstation:
 
-    ![ssh key generation ](/images-week2/ssh-key-gen-proof.png)
+    ![ssh key generation ](assets/images-2/ssh-key.png)
 
-    The SSH public key was copied to the server, which enables passwordless login.
-
-    ![server key add](/images-week2/server-key-added.png)
 
 3.  **`PermitRootLogin no`**
     This configuration disables the ability to log in as the root user directly via SSH. This prevents unauthorized full system access and reduces the risk associated with a compromised root account.
@@ -197,13 +181,9 @@ After SSH configuration changes:
 4.  **`port 2424`** (Changing the default SSH port)
     Modifying the default SSH port is a common security practice used to deter automated scanning and attacks that target the standard port 22.
 
-    ![](/images-week2/2424.png)
-
     The firewall must also be configured to permit traffic on the new port using the following commands:
     `sudo ufw allow 2424/tcp`
     `sudo ufw reload`
-
-    ![](/images-week2/2424_2.png)
 
 ## Firewall Implementation (UFW)
 
@@ -214,30 +194,30 @@ After SSH configuration changes:
 `sudo ufw default allow outgoing`: Permits all outgoing traffic from the system (Egress).
 `sudo ufw allow from 192.168.10.3 to any port 22`: Allows incoming connections from a specific IP address (the workstation) only to port 22 (the default SSH port, though this should be updated to 2424 if the port change is active).
 
-![](/images-week2/firewall_1.png)
+![](assets/images-2/ssh-firewall.png)
 
 ## User and Privilege Management (UPM)
 
 1.  **Creating a User**
     `sudo adduser adminuser`
 
-    ![](/images-week2/UPM1.0.png)
+    ![](assets/images-2/sudoadduser.png)
 
 2.  **Adding User to the `sudo` Group**
 
-    ![](/images-week2/UPM2.png)
+    ![](assets/images-2/usertosudogroup.png)
 
 3.  **Verification of Group Membership**
 
-    ![](/images-week2/verification_UPM.png)
+    ![](assets/images-2/verificationgroup.png)
 
 4.  **Testing `sudo` Access**
 
-    ![](/images-week2/test_UPM.png)
+    ![](assets/images-2/testingsudoaccess.png)
 
 5.  **Listing all Users with `sudo` Access**
 
-    ![](/images-week2/test2-upm.png)
+    ![](assets/images-2/listingalluserswithsudo.png)
 
 ## Access Control (MAC)
 
@@ -278,5 +258,9 @@ The status of the `unattended-upgrades` service can be checked with the command:
 3.  **Root Privilege Compromise**
     An attacker who gains initial access may attempt to escalate privileges to the root account.
     *   **Mitigation**: Disabling direct root login via SSH (`PermitRootLogin no` in `sshd_config`) forces attackers to compromise a specific, non-root username first. Furthermore, creating a dedicated `adminuser` and granting `sudo` rights only when necessary adds an essential layer of protection and adheres to the principle of least privilege.
+
+
+
+
 
 
