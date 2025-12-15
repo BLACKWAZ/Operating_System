@@ -60,26 +60,24 @@ This section illustrates the baseline resource consumption of the server when it
 
 ### Idle state using `top`
 
-![System idle from top ](images-week2/server-idle-1.png)
+![System idle from top ](assets/images-2/top.png)
 
 ### Idle state using `htop`
 
-![System idle from htop ](images-week2/server-idle-2.png)
+![System idle from htop ](assets/images-2/htop.png)
 
 ### Process Tree (`pstree`)
 
-![System ps tree](images-week2/server-pstree.png)
+![System ps tree](assets/images-2/pstree.png)
 
 ### `btop`
 
 **Installation**
 `sudo apt install btop`
 
-![image proof of installing btop](/images-week2/btop-installation.png)
-
 **System idle state from Btop**
 
-![System idle state from btop](/images-week2/btop-idle.png)
+![System idle state from btop](assets/images-2/btop.png)
 
 ### `nmon`
 
@@ -278,5 +276,6 @@ The status of the `unattended-upgrades` service can be checked with the command:
 3.  **Root Privilege Compromise**
     An attacker who gains initial access may attempt to escalate privileges to the root account.
     *   **Mitigation**: Disabling direct root login via SSH (`PermitRootLogin no` in `sshd_config`) forces attackers to compromise a specific, non-root username first. Furthermore, creating a dedicated `adminuser` and granting `sudo` rights only when necessary adds an essential layer of protection and adheres to the principle of least privilege.
+
 
 
