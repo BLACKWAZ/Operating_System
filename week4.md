@@ -79,7 +79,7 @@ To further strengthen server security, the Uncomplicated Firewall (UFW) is confi
 
 ### Firewall Status Prior to Configuration
 
-![](/week4_image/ufw-current-status.png)
+![](assets/images-4/configurefirewall.png)
 
 ### Applied Firewall Rules
 
@@ -92,7 +92,7 @@ These rules explicitly permit SSH connections only from the specified IP address
 
 ### Firewall Status After Configuration
 
-![](/week4_image/status_after_change.png)
+![](assets/images-4/statusverbose.png)
 
 ---
 
@@ -151,6 +151,7 @@ The screenshots below illustrate successful SSH connections established using ke
 ![](/week4_image/demo\(3\).png)
 
 ![](/week4_image/demo\(final\).png)
+
 
 
 
