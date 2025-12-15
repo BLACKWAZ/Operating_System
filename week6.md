@@ -132,9 +132,6 @@ stress --vm 1 --vm-bytes 512M --timeout 60s
 
 ---
 
-### CPU Stress Test Results
-
-![](/week6_image/CPUtest.png)
 
 **Observations:**
 
@@ -143,11 +140,6 @@ stress --vm 1 --vm-bytes 512M --timeout 60s
 
 ---
 
-### Memory Stress Test Results
-
-![](/week6_image/memory_test.png)
-
-![](/week6_image/memory_test\(2\).png)
 
 **Observations:**
 
@@ -183,6 +175,7 @@ stress --vm 1 --vm-bytes 512M --timeout 60s
 1. **Storage Upgrade:** Replace the existing disk with an NVMe‑based SSD to significantly increase throughput.
 2. **Caching Implementation:** Utilize system memory for write‑back caching to absorb temporary write spikes.
 3. **I/O Separation:** Distribute operating system files and application data across separate physical disks to reduce contention.
+
 
 
 
