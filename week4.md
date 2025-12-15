@@ -79,7 +79,7 @@ To further strengthen server security, the Uncomplicated Firewall (UFW) is confi
 
 ### Firewall Status Prior to Configuration
 
-![](/week4_image/ufw-current-status.png)
+![](assets/images-4/configurefirewall.png)
 
 ### Applied Firewall Rules
 
@@ -92,66 +92,9 @@ These rules explicitly permit SSH connections only from the specified IP address
 
 ### Firewall Status After Configuration
 
-![](/week4_image/status_after_change.png)
+![](assets/images-4/statusverbose.png)
 
 ---
-
-## 3. User Management and Non‑Root Administrative Account
-
-To comply with best security practices, a non‑root administrative user is created to minimize risks associated with direct root access.
-
-### Creation of Administrative User
-
-![](/week4_image/usercreation.png)
-
-### Verification of Sudo Privileges
-
-![](/week4_image/adding_user_to_sudo_verfication.png)
-
-### Functional Testing of Administrative Access
-
-![](/week4_image/switching_user_udate_test.png)
-
-![](id)
-
----
-
-## Principle of Least Privilege
-
-The principle of least privilege dictates that users should be granted only the minimum permissions required to perform their assigned tasks. Adhering to this principle reduces the likelihood of accidental misconfiguration and limits the potential impact of malicious activity.
-
----
-
-## Rationale for Using a Non‑Root Administrative User
-
-Unrestricted root access provides complete control over the operating system, which poses significant security risks if misused. Employing a non‑root administrative account with controlled sudo privileges enables necessary administrative functions while reducing the risk of unintended system‑wide changes.
-
----
-
-## Remote Administration Demonstration
-
-The following screenshots demonstrate secure remote administrative operations performed using the configured non‑root administrative account.
-
-![](/week4_image/remoteadmin\(1-3\).png)
-
-![](/week4_image/remoteadmin\(4\).png)
-
-![](/week4_image/remoteadmin\(5\).png)
-
----
-
-## SSH Connection Demonstration
-
-The screenshots below illustrate successful SSH connections established using key‑based authentication.
-
-![](/week4_image/demo\(1\).png)
-
-![](/week4_image/demo\(2\).png)
-
-![](/week4_image/demo\(3\).png)
-
-![](/week4_image/demo\(final\).png)
-
 
 
 
