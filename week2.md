@@ -84,15 +84,9 @@ This section illustrates the baseline resource consumption of the server when it
 **Installation**
 `sudo apt install nmon`
 
-![nmon installation](/images-week2/nmon.png)
-
-**`nmon` menu page** (`nmon -a`)
-
-![nmon menu page](/images-week2/nmon-s1.png)
-
 **`nmon` view with CPU, Memory, and network status**
 
-![nmon stats view](/images-week2/nmon-view.png)
+![nmon stats view](assets/images-2/nmon.png)
 
 ## Stress Testing Methodology
 
@@ -114,21 +108,20 @@ Some of the widely used tools include:
 
 The command executed was: `stress --cpu 4 --timeout 60&`
 
-![command proof](/images-week2/proof_of_stress_test_command.png)
 
 ### Results from Monitoring Tools
 
 **`top`**
-![top](/images-week2/stress-in-top.png)
+![top](assets/images-2/stress-top.png)
 
 **`btop`**
-![btop](/images-week2/stress-in-btop.png)
+![btop](assets/images-2/stress-btop.png)
 
 **`nmon`**
-![nmon](/images-week2/stress-in-nmon.png)
+![nmon](assets/images-2/stress-nmon.png)
 
 **Process Tree (`pstree`)**
-![psstree](/images-week2/stress-in-pstree.png)
+![psstree](assets/images-2/stress-pstree.png)
 
 # Security Configuration Checklist and Testing Plan
 
@@ -276,6 +269,7 @@ The status of the `unattended-upgrades` service can be checked with the command:
 3.  **Root Privilege Compromise**
     An attacker who gains initial access may attempt to escalate privileges to the root account.
     *   **Mitigation**: Disabling direct root login via SSH (`PermitRootLogin no` in `sshd_config`) forces attackers to compromise a specific, non-root username first. Furthermore, creating a dedicated `adminuser` and granting `sudo` rights only when necessary adds an essential layer of protection and adheres to the principle of least privilege.
+
 
 
 
