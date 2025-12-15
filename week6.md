@@ -68,7 +68,7 @@ During the write performance test, the following metrics were observed:
 Latency testing was performed to measure round‑trip time (RTT) between the client and the server.
 
 ```bash
-ping -c 10 192.168.10.4
+ping -c 10 192.168.56.102
 ```
 
 ![](assets/images-6/ping.png)
@@ -86,7 +86,7 @@ The server and client were configured as follows:
 iperf3 -s
 
 # Client side
-iperf3 -c 192.168.10.4 -t 30
+iperf3 -c 192.168.56.102 -t 30
 ```
 
 ### Observations
@@ -175,6 +175,7 @@ stress --vm 1 --vm-bytes 512M --timeout 60s
 1. **Storage Upgrade:** Replace the existing disk with an NVMe‑based SSD to significantly increase throughput.
 2. **Caching Implementation:** Utilize system memory for write‑back caching to absorb temporary write spikes.
 3. **I/O Separation:** Distribute operating system files and application data across separate physical disks to reduce contention.
+
 
 
 
