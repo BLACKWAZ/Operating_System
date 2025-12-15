@@ -153,26 +153,21 @@ CPU and RAM usage are expected to remain low. The primary metric will be network
 ![server side listening](assets/images-3/iperflistening.png)
 
 
-![server side listening](/week3_image/server_side_listening_test.png)
-
-
-![client side listening](/week3_image/client_side_testing.png)
-
-
-![client side listening](/week3_image/client-side-packet-sending-proof.png)
+![server side listening](assets/images-3/perflistening2.png)
 
 
 ## Monitoring Network Test using nmon
 
-![nmon network monitoring](/week3_image/network_testing_proof1.png)
+![nmon network monitoring](assets/images-3/monitoringtest.png)
 
 
-![nmon network monitoring](/week3_image/network_testing_proof2.png)
+![nmon network monitoring](assets/images-3/monitoringtest2.png)
 
 
 ## Monitoring Strategy 
 
 To measure the performance impact of the selected applications, we will utilize the monitoring tools and strategies established in Week 2.
+
 
 
 
