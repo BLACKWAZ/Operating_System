@@ -18,7 +18,7 @@ This tool can be installed using `sudo apt install sysbench -y`.
 
 Verification for installation can be done using `sysbench --version`.
 
-![sysbench version](/week3_image/w1.png)
+![sysbench version](assets/images-3/sysbench.png)
 
 
 ### RAM-Intensive Workload
@@ -35,7 +35,7 @@ Installation can be done by using the command:
 
 Verification: `stress-ng --version`
 
-![stress-ng](/week3_image/w2.png)
+![stress-ng](assets/images-3/stressversion.png)
 
 
 ### I/O-Intensive Workload
@@ -55,7 +55,7 @@ Verification:
 
 `fio --version`
 
-![fio ](/week3_image/w3.png)
+![fio ](assets/images-3/fioversion.png)
 
 ### Network-Intensive Workload
 
@@ -78,7 +78,7 @@ Verification:
 
 `iperf3 --version`
 
-![iperf3](/week3_image/w4.png)
+![iperf3](assets/images-3/iperf3version.png)
 
 ## Application Selection Matrix
 
@@ -183,5 +183,6 @@ CPU and RAM usage are expected to remain low. The primary metric will be network
 ## Monitoring Strategy 
 
 To measure the performance impact of the selected applications, we will utilize the monitoring tools and strategies established in Week 2.
+
 
 
