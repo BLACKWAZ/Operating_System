@@ -150,7 +150,7 @@ CPU and RAM usage are expected to remain low. The primary metric will be network
 4.  The firewall (UFW) must be configured to allow the necessary network traffic, which can be done using: `sudo ufw allow <port>/tcp` (or `udp`).
 
 
-![server side listening](/week3_image/server_side_listening.png)
+![server side listening](assets/images-3/iperflistening.png)
 
 
 ![server side listening](/week3_image/server_side_listening_test.png)
@@ -173,6 +173,7 @@ CPU and RAM usage are expected to remain low. The primary metric will be network
 ## Monitoring Strategy 
 
 To measure the performance impact of the selected applications, we will utilize the monitoring tools and strategies established in Week 2.
+
 
 
 
