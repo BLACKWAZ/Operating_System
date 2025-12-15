@@ -52,9 +52,9 @@ PasswordAuthentication no
 
 These settings ensure that public key authentication is enabled while password‑based authentication is disabled, significantly improving access control.
 
-![](/week4_image/pub-key-yes.png)
+![](assets/images-4/pubkey.png)
 
-![](/week4_image/passauthentication_no.png)
+![](assets/images-4/passwordauth.png)
 
 Following these changes, the SSH service is restarted to apply the new configuration.
 
@@ -70,7 +70,6 @@ ssh username@ip_address
 
 Successful login without a password confirms correct implementation of key‑based authentication.
 
-![](/week4_image/ssh-login.png)
 
 ---
 
@@ -152,6 +151,7 @@ The screenshots below illustrate successful SSH connections established using ke
 ![](/week4_image/demo\(3\).png)
 
 ![](/week4_image/demo\(final\).png)
+
 
 
 
