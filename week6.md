@@ -19,19 +19,19 @@ A baseline is established by measuring system performance while the server is in
 
 ### CPU and Process Utilization
 
-![](/week6_image/1.png)
+![](/assets/images-6/cpu.png)
 
 ### Memory Availability
 
-![](/week6_image/2.png)
+![](assets/images-6/memory.png)
 
 ### Disk Subsystem (Idle State)
 
-![](/week6_image/3.png)
+![](assets/images-6/disk.png)
 
 ### Network Activity
 
-![](/week6_image/4.png)
+![](assets/images-6/network.png)
 
 ---
 
@@ -51,18 +51,11 @@ Disk performance is monitored in real time using:
 iostat -x 1
 ```
 
-![](/week6_image/5.png)
+![](assets/images-6/storage.png)
 
 ### Observations
 
 During the write performance test, the following metrics were observed:
-
-* **Disk Utilization (%util):** Peaked at 90.59%, indicating near‑maximum device usage.
-* **Average Wait Time (await):** Measured at 4.50 ms, reflecting efficient I/O request handling.
-
-![](/week6_image/test.png)
-
-![](/week6_image/test2.png)
 
 ---
 
@@ -75,10 +68,10 @@ During the write performance test, the following metrics were observed:
 Latency testing was performed to measure round‑trip time (RTT) between the client and the server.
 
 ```bash
-ping -c 10 192.168.10.4
+ping -c 10 192.168.56.102
 ```
 
-![](/week6_image/ping_test.png)
+![](assets/images-6/ping.png)
 
 ---
 
@@ -93,7 +86,7 @@ The server and client were configured as follows:
 iperf3 -s
 
 # Client side
-iperf3 -c 192.168.10.4 -t 30
+iperf3 -c 192.168.56.102 -t 30
 ```
 
 ### Observations
@@ -139,9 +132,6 @@ stress --vm 1 --vm-bytes 512M --timeout 60s
 
 ---
 
-### CPU Stress Test Results
-
-![](/week6_image/CPUtest.png)
 
 **Observations:**
 
@@ -150,11 +140,6 @@ stress --vm 1 --vm-bytes 512M --timeout 60s
 
 ---
 
-### Memory Stress Test Results
-
-![](/week6_image/memory_test.png)
-
-![](/week6_image/memory_test\(2\).png)
 
 **Observations:**
 
@@ -190,5 +175,8 @@ stress --vm 1 --vm-bytes 512M --timeout 60s
 1. **Storage Upgrade:** Replace the existing disk with an NVMe‑based SSD to significantly increase throughput.
 2. **Caching Implementation:** Utilize system memory for write‑back caching to absorb temporary write spikes.
 3. **I/O Separation:** Distribute operating system files and application data across separate physical disks to reduce contention.
+
+
+
 
 
