@@ -17,7 +17,7 @@ ssh-keygen -t ed25519 -C "comments"
 
 This command generates a cryptographically secure private key, which remains on the workstation, and a corresponding public key that will be deployed to the remote server.
 
-![ssh key generation image ](/week4_image/keygen4.png)
+![ssh key generation image ](assets/images-4/ssh-key.png)
 
 ---
 
@@ -152,5 +152,6 @@ The screenshots below illustrate successful SSH connections established using ke
 ![](/week4_image/demo\(3\).png)
 
 ![](/week4_image/demo\(final\).png)
+
 
 
