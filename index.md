@@ -36,10 +36,10 @@ By completing this coursework, I will demonstrate:
 |------|-------|-------|--------------|--------|
 | 1 | Planning | System Planning & Distribution Selection | Architecture, Justifications, Network Config | ✅ |
 | 2 | Design | Security Planning & Testing Methodology | Testing Plan, Security Checklist, Threat Model | ✅ |
-| 3 | Selection | Application Selection for Performance Testing | App Matrix, Installation Docs, Monitoring Strategy | ⏳ |
-| 4 | Implementation | Initial Security & System Configuration | SSH Config, Firewall, Users, Evidence | ⏳ |
-| 5 | Advanced | Advanced Security & Monitoring Infrastructure | SELinux/AppArmor, Fail2Ban, Scripts | ⏳ |
-| 6 | Testing | Performance Evaluation & Analysis | Performance Data, Graphs, Optimization Results | ⏳ |
+| 3 | Selection | Application Selection for Performance Testing | App Matrix, Installation Docs, Monitoring Strategy | ✅ |
+| 4 | Implementation | Initial Security & System Configuration | SSH Config, Firewall, Users, Evidence | ✅ |
+| 5 | Advanced | Advanced Security & Monitoring Infrastructure | SELinux/AppArmor, Fail2Ban, Scripts | ✅ |
+| 6 | Testing | Performance Evaluation & Analysis | Performance Data, Graphs, Optimization Results | ✅ |
 | 7 | Audit | Security Audit & System Evaluation | Lynis Report, nmap Results, Risk Assessment | ⏳ |
 
 ### Quick Navigation
