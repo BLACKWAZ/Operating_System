@@ -106,7 +106,7 @@ To evaluate application‑level performance under concurrent load, Apache Bench 
 sudo apt install apache2 apache2-utils -y
 ```
 
-![](/week6_image/server-test.png)
+![](assets/images-6/apache.png)
 
 ### Observations
 
@@ -175,6 +175,7 @@ stress --vm 1 --vm-bytes 512M --timeout 60s
 1. **Storage Upgrade:** Replace the existing disk with an NVMe‑based SSD to significantly increase throughput.
 2. **Caching Implementation:** Utilize system memory for write‑back caching to absorb temporary write spikes.
 3. **I/O Separation:** Distribute operating system files and application data across separate physical disks to reduce contention.
+
 
 
 
