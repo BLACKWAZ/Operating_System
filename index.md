@@ -40,7 +40,7 @@ By completing this coursework, I will demonstrate:
 | 4 | Implementation | Initial Security & System Configuration | SSH Config, Firewall, Users, Evidence | ✅ |
 | 5 | Advanced | Advanced Security & Monitoring Infrastructure | SELinux/AppArmor, Fail2Ban, Scripts | ✅ |
 | 6 | Testing | Performance Evaluation & Analysis | Performance Data, Graphs, Optimization Results | ✅ |
-| 7 | Audit | Security Audit & System Evaluation | Lynis Report, nmap Results, Risk Assessment | ⏳ |
+| 7 | Audit | Security Audit & System Evaluation | Lynis Report, nmap Results, Risk Assessment | ✅ |
 
 ### Quick Navigation
 
