@@ -32,7 +32,7 @@ sudo lynis audit system
 
 ### Audit Execution Progress
 
-![](/week7_images/auditing.png)
+![](assets/images-7/lynisaudit.png)
 
 NOTE: The security assessment process may take several minutes to complete.
 
@@ -40,7 +40,7 @@ NOTE: The security assessment process may take several minutes to complete.
 
 The system's security posture, as measured by the initial Lynis score before any changes were applied:
 
-![](/week7_images/audit_score.png)
+![](assets/images-7/before.png)
 
 ### Security Warnings and Remediation Steps
 
@@ -48,7 +48,6 @@ The audit identified several areas for improvement, with corresponding solutions
 
 **Suggestion 1: Package Bug Reporting**
 
-![](/week7_images/suggestion(1).png)
 
 **Solution:** Install `apt-listbugs` to proactively check for critical bugs in packages before installation or upgrade.
 
@@ -62,7 +61,7 @@ sudo apt install apt-listbugs
 
 **Suggestion 2: Reviewing Package Changelogs**
 
-![](/week7_images/suggestion(2).png)
+![](assets/images-7/listchanges.png)
 
 **Solution:** Install `apt-listchanges` to review important upstream changelogs for packages.
 
@@ -72,9 +71,6 @@ sudo apt install apt-listchanges
 # Automatically displays significant changes in packages during the upgrade/installation process.
 ```
 
-**Suggestion 3: SSH Configuration Hardening**
-
-![](/week7_images/suggestion(ssh).png)
 
 ### Implemented SSH Hardening Measures
 
@@ -95,8 +91,6 @@ AllowAgentForwarding no
 **Description:** This configuration set was applied to mitigate various risks. Disabling `AllowTcpForwarding` and `AllowAgentForwarding` prevents SSH tunneling and credential forwarding abuse. Setting `ClientAliveInterval` and `ClientAliveCountMax` ensures that inactive sessions are automatically terminated. `LogLevel VERBOSE` facilitates detailed logging for auditing purposes. Limits on `MaxAuthTries` and `MaxSessions` reduce the risk of brute-force attacks and resource exhaustion. Finally, disabling `TCPKeepAlive` and `X11Forwarding` further reduces the attack surface.
 
 **Suggestion 4: Malware and Rootkit Detection**
-
-![](/week7_images/suggestion(malware).png)
 
 **Solution:** Deploy a rootkit and malware detection tool, and configure it for automated execution.
 
@@ -123,7 +117,7 @@ CRON_DB_UPDATE="yes"
 
 The security score after implementing the recommended changes and hardening the system:
 
-![](/week7_images/after_audit.png)
+![](assets/images-7/after.png)
 
 ## 2. Network Security Verification
 
@@ -131,13 +125,12 @@ The security score after implementing the recommended changes and hardening the 
 
 The current firewall rules in place:
 
-![](/week7_images/firewallrule.png)
 
 ### Nmap Port Scan Results
 
 The output from the Nmap scan confirms the active network services:
 
-![](/week7_images/nmap(2).png)
+![](assets/images-7/inventory.png)
 
 **Observation:** Port 2424 is open for remote SSH access. This is a deliberate configuration, as the default SSH port (22) was changed to 2424 during the hardening phase, and the firewall rules were updated accordingly to permit connections on this new port.
 
@@ -165,8 +158,9 @@ The system experienced multiple unexpected crashes and boot failures during the 
 
 The primary network interface, identified as `enp03s`, became completely unresponsive, preventing all network connectivity (e.g., pinging). Attempts to manually bring the interface up using `sudo ip link set enp03s up` were unsuccessful. After extensive troubleshooting, including multiple reboots, the solution involved changing the network adapter type and reapplying the existing network settings:
 
-![](/week7_images/networkproblem.png)
+![](assets/images-7/fail.png)
 
 Following this change, a new IP address was assigned, which necessitated updating the firewall rules and SSH configuration to allow remote access on the new IP.
+
 
 
